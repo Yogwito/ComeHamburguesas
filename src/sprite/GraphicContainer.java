@@ -3,11 +3,14 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
 package sprite;
+import java.util.List;
 
 /**
  *
  * @author juans
  */
-public class GraphicContainer {
-    
+
+public interface GraphicContainer {
+    List<Sprite> getSprites();
+    void addSprite(Sprite sprite);
 }

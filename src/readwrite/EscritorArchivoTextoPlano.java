@@ -8,6 +8,10 @@ package readwrite;
  *
  * @author juans
  */
-public class EscritorArchivoTextoPlano {
-    
+
+public class EscritorArchivoTextoPlano implements Escritor {
+    @Override
+    public void escribirArchivo(String ruta, String contenido) {
+        // TODO: implementar escritura en archivo
+    }
 }

@@ -8,6 +8,10 @@ package readwrite;
  *
  * @author juans
  */
-public class LectorArchivoTextoPlano {
-    
+
+public class LectorArchivoTextoPlano implements Lector {
+    @Override
+    public void leerArchivo(String ruta) {
+        // TODO: implementar lectura de archivo
+    }
 }

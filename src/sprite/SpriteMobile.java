@@ -8,6 +8,14 @@ package sprite;
  *
  * @author juans
  */
-public class SpriteMobile {
+public abstract class SpriteMobile extends Sprite {
+
+    public SpriteMobile(int x, int y, int width, int height) {
+        super(x, y, width, height);
+    }
     
+    public void moverHaciaAbajo(int velocidad) {
+    this.y += velocidad;
+    }
+
 }

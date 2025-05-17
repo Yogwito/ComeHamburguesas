@@ -8,6 +8,7 @@ package readwrite;
  *
  * @author juans
  */
-public class Lector {
-    
+
+public interface Lector {
+    void leerArchivo(String ruta);
 }

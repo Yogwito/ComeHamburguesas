@@ -8,6 +8,7 @@ package readwrite;
  *
  * @author juans
  */
-public class Escritor {
-    
+
+public interface Escritor {
+    void escribirArchivo(String ruta, String contenido);
 }
