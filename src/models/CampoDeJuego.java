@@ -72,4 +72,23 @@ public class CampoDeJuego extends SpriteContainer {
         }
         return fuera;
     }
+    public boolean hayColision(int x, int y, int ancho, int alto) {
+        for (Sprite s : getSprites()) {
+            if (x < s.getX() + s.getWidth() && x + ancho > s.getX() &&
+                y < s.getY() + s.getHeight() && y + alto > s.getY()) {
+                return true; // Hay colisión
+            }
+    }
+    return false;
+    }
+    
+    public List<Veneno> venenosFueraDelLimite(int alturaVentana) {
+        List<Veneno> fuera = new ArrayList<>();
+        for (Sprite s : getSprites()) {
+            if (s instanceof Veneno && s.getY() > alturaVentana) {
+                fuera.add((Veneno) s);
+            }
+        }
+        return fuera;
+    }
 }

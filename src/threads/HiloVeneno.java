@@ -7,6 +7,8 @@ import models.CampoDeJuego;
 import models.Veneno;
 import java.util.Random;
 import javax.swing.JPanel;
+import gui.VentanaJuego;
+import java.util.List;
 
 /**
  *
@@ -27,14 +29,22 @@ public class HiloVeneno implements Runnable {
     @Override
     public void run() {
         while (true) {
+            // Generar veneno solo si hay menos de 4 activos
             if (campo.contarTipo(Veneno.class) < 4) {
-                int x = random.nextInt(760);
+                int x = random.nextInt(760); // 800 - ancho veneno
                 if (!campo.hayColision(x, 0, 40, 40)) {
                     campo.addSprite(new Veneno(x, 0, 40, 40));
                 }
             }
 
             campo.moverTodo(Veneno.class, 5);
+
+            // Eliminar venenos que se salieron del panel
+            List<Veneno> fuera = campo.venenosFueraDelLimite(panel.getHeight());
+            for (Veneno v : fuera) {
+                campo.removeSprite(v);
+            }
+
             panel.repaint();
 
             try {
