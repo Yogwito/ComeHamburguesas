@@ -13,8 +13,7 @@ import javax.swing.JPanel;
  * @author juans
  */
 
-public class 
-        HiloVeneno implements Runnable {
+public class HiloVeneno implements Runnable {
 
     private CampoDeJuego campo;
     private JPanel panel;
@@ -30,7 +29,9 @@ public class
         while (true) {
             if (campo.contarTipo(Veneno.class) < 4) {
                 int x = random.nextInt(760);
-                campo.addSprite(new Veneno(x, 0, 40, 40));
+                if (!campo.hayColision(x, 0, 40, 40)) {
+                    campo.addSprite(new Veneno(x, 0, 40, 40));
+                }
             }
 
             campo.moverTodo(Veneno.class, 5);
