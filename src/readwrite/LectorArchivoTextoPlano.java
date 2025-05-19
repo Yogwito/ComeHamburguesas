@@ -5,11 +5,18 @@
 package readwrite;
 
 /**
- *
- * @author juans
+ * 
+ * @author Juans & Trujirendjj
  */
-
 public class LectorArchivoTextoPlano implements Lector {
+
+    /**
+     * Lee el contenido de un archivo ubicado en la ruta especificada.
+     * 
+     * Este método aún no ha sido implementado.
+     *
+     * @param ruta la ruta del archivo que se desea leer.
+     */
     @Override
     public void leerArchivo(String ruta) {
         // TODO: implementar lectura de archivo

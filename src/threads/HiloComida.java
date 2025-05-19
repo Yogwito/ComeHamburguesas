@@ -3,6 +3,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
 package threads;
+
 import java.util.List;
 import models.CampoDeJuego;
 import models.Comida;
@@ -11,21 +12,33 @@ import javax.swing.JPanel;
 import gui.VentanaJuego;
 
 /**
- *
- * @author juans
+ * @author Juans & Trujirendjj
  */
-
 public class HiloComida implements Runnable {
 
+    /** Referencia al campo de juego donde se gestionan los sprites. */
     private CampoDeJuego campo;
+
+    /** Panel gráfico donde se pinta el juego. */
     private JPanel panel;
+
+    /** Generador de números aleatorios para la posición horizontal de las comidas. */
     private Random random = new Random();
 
+    /**
+     * Constructor que inicializa el hilo con el campo de juego y el panel gráfico.
+     * 
+     * @param campo el campo de juego que contiene los sprites.
+     * @param panel el panel donde se representa gráficamente el juego.
+     */
     public HiloComida(CampoDeJuego campo, JPanel panel) {
         this.campo = campo;
         this.panel = panel;
     }
     
+    /**
+     * Método que contiene la lógica del hilo.
+     */
     @Override
     public void run() {
         while (true) {

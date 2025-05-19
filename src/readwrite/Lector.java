@@ -5,10 +5,15 @@
 package readwrite;
 
 /**
- *
- * @author juans
+ * 
+ * @author Juans & Trujirendjj
  */
-
 public interface Lector {
+
+    /**
+     * Lee el contenido de un archivo ubicado en la ruta especificada.
+     *
+     * @param ruta la ruta del archivo a leer.
+     */
     void leerArchivo(String ruta);
 }
