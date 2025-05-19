@@ -36,11 +36,10 @@ public class HiloComida implements Runnable {
 
             campo.moverTodo(Comida.class, 5);
 
-            // ✅ Aquí validamos si alguna comida se salió de la ventana
             List<Comida> fuera = campo.comidasFueraDelLimite(panel.getHeight());
             for (Comida c : fuera) {
                 campo.removeSprite(c);
-                VentanaJuego.restarPuntoPorCaida(); // método que resta 1 punto
+                VentanaJuego.restarPuntoPorCaida();
             }
 
             panel.repaint();
