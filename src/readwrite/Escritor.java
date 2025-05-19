@@ -5,10 +5,16 @@
 package readwrite;
 
 /**
- *
- * @author juans
+ * 
+ * @author Juans & Trujirendjj
  */
-
 public interface Escritor {
+
+    /**
+     * Escribe contenido en un archivo ubicado en la ruta especificada.
+     *
+     * @param ruta     la ruta del archivo donde se escribirá el contenido.
+     * @param contenido el texto que se desea escribir en el archivo.
+     */
     void escribirArchivo(String ruta, String contenido);
 }
