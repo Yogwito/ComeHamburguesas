@@ -16,13 +16,8 @@ import java.util.List;
  */
 public class HiloVeneno implements Runnable {
 
-<<<<<<< HEAD
-public class HiloVeneno implements Runnable {
-
-=======
     /** Referencia al campo de juego donde se gestionan los sprites. */
->>>>>>> b819558f8ee1f49b61828aa729ae0690f99d8c69
-    private CampoDeJuego campo;
+private CampoDeJuego campo;
 
     /** Panel gráfico donde se pinta el juego. */
     private JPanel panel;
